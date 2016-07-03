@@ -1,0 +1,8 @@
+name: JumpCreator
+version: 1
+main: ch.reaamz.jumpcreator.JumpCreator
+
+commands:
+ jump:
+  description: Jump command
+  usage: /<command>
