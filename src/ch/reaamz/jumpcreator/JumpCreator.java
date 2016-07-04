@@ -6,6 +6,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import ch.reaamz.jumpcreator.command.JumpCommand;
+import ch.reaamz.jumpcreator.completer.JumpCompleter;
 import ch.reaamz.jumpcreator.database.JumpDatabase;
 
 public class JumpCreator extends JavaPlugin
@@ -31,7 +32,9 @@ public class JumpCreator extends JavaPlugin
 		}
 
 		JumpCommand jump = new JumpCommand();
+		JumpCompleter completer = new JumpCompleter();
 		getCommand("jump").setExecutor(jump);
+		getCommand("jump").setTabCompleter(completer);
 		
 		Utils.logInfo("JumpCreator version 1 successfully loaded.");
 	}

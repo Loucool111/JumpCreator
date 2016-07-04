@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.UUID;
 
+import org.bukkit.Location;
+
 import ch.reaamz.jumpcreator.JumpCreator;
 import code.husky.mysql.MySQL;
 
@@ -69,4 +71,36 @@ public class JumpDatabase
 
 		return false;
 	}
+	
+	public boolean changeJumpName(UUID who, int JumpID, String newName)
+	{
+		return false;
+	}
+	
+	public boolean changeJumpTP(UUID who, int JumpID, Location tpLoc)
+	{
+		return false;
+	}
+	
+	public boolean changeJumpStart(UUID who, int JumpID, Location startLoc)
+	{
+		return false;
+	}
+	
+	public boolean changeJumpEnd(UUID who, int JumpID, Location endLoc)
+	{
+		return false;
+	}
+	
+	public boolean changeJumpRefTime(UUID who, int JumpID, String RefTime)
+	{
+		return false;
+	}
+	
+	/*
+	public String getJumpInfo(UUID who, int JumpID, String InfoName)
+	{
+		return "";
+	}
+	*/
 }

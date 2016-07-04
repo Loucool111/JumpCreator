@@ -60,12 +60,18 @@ public class JumpCommand implements CommandExecutor
 								Utils.sendCustomMessage(p, ChatColor.GREEN + "Successfully deleted JumpId : " + args[1]);
 							else
 								Utils.sendCustomMessage(p, ChatColor.RED + "Could not delete JumpID : " + args[1] + ". It either doesn't exist or you do not have permission to delete it.");
+							
+							return true;
 						}
 						else
 						{
 							sendHelp(p, "ID must be an number !");
 							return true;
 						}
+					}
+					else if (args[0].equalsIgnoreCase("list"))
+					{
+						
 					}
 					else if (Utils.isInteger(args[0]))
 					{
@@ -93,6 +99,7 @@ public class JumpCommand implements CommandExecutor
 		Utils.sendCustomMessage(p, ChatColor.RED + message);
 		Utils.sendCustomMessage(p, ChatColor.GOLD + "Jump Command Syntax :");
 		Utils.sendCustomMessage(p, ChatColor.AQUA + "/jump list");
+		Utils.sendCustomMessage(p, ChatColor.AQUA + "/jump info <ID>");
 		Utils.sendCustomMessage(p, ChatColor.AQUA + "/jump create <Name>");
 		Utils.sendCustomMessage(p, ChatColor.AQUA + "/jump delete <ID>");
 		Utils.sendCustomMessage(p, ChatColor.AQUA + "/jump <ID> get <Author|Name|TP|Start|End|RefTime>");
