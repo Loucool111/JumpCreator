@@ -11,6 +11,16 @@ import ch.reaamz.jumpcreator.database.JumpDatabase;
 
 public class JumpCreator extends JavaPlugin
 {
+	/*
+	 * TODOList:
+	 * ajout / modif des locs
+	 * 
+	 * 
+	 * 
+	 * Future:
+	 * JumpScores, tJumpScores, etc
+	 */
+	
 	public static Plugin instance;
 	public static JumpDatabase database = new JumpDatabase();
 

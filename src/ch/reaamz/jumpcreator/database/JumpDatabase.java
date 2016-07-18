@@ -79,6 +79,21 @@ public class JumpDatabase
 	
 	public boolean changeJumpTP(UUID who, int JumpID, Location tpLoc)
 	{
+		try
+		{
+			Statement state = this.db.getConnection().createStatement();
+			
+			state.executeUpdate("INSERT INTO tJump (JUM_TP) VALUES ('" + tpLoc.serialize().toString() + "') WHERE IDJump=" + JumpID + "");
+			
+			state.close();
+			
+			return true;
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+		
 		return false;
 	}
 	
