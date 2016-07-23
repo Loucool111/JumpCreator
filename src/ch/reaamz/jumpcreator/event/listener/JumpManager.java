@@ -8,7 +8,7 @@ import ch.reaamz.jumpcreator.event.JumpStartEvent;
 
 public class JumpManager implements Listener
 {
-
+	
 	
 	@EventHandler
 	public void onJumpStart(final JumpStartEvent e)
